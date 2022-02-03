@@ -1,5 +1,0 @@
-<?php
-$dbhost = "phpmyadmin.ecs.westminster.ac.uk";
-$dbuser = "w1833548";
-$dbpass = "g3wVxIH7Ix9D";
-$dbname = "w1833548_0";
