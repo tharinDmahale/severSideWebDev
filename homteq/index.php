@@ -27,7 +27,7 @@ while($arrayp=mysqli_fetch_array($exeSQL))
 	echo "<tr>";
 	echo "<td style='border: 0px'>";
 	//make the image into an anchor to prodbuy.php and pass the product id by URL (the id from the array)
-	echo "<a href=prodbuy.php?u_ prod_id=".$arrayp['prodId'].">";
+	echo "<a href=prodbuy.php?u_prod_id=".$arrayp['prodId'].">";
 	//display the small image whose name is contained in the array
 	echo "<img src=images/".$arrayp['prodPicNameSmall']." height=200 width=200>";
 	//close the anchor
