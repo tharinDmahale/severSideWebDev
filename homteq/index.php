@@ -38,7 +38,7 @@ while($arrayp=mysqli_fetch_array($exeSQL))
 	echo "</td>";
 	echo "</tr>";
 	echo "<p>".$arrayp['prodDescripShort']."</p>"; //display product description short
-	echo "<p>".$arrayp['prodPrice']."</p>"; //display product price short
+	echo "<p> price: ".$arrayp['prodPrice']."</p>"; //display product price short
 }
 echo "</table>";
 
