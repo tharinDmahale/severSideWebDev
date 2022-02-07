@@ -34,11 +34,11 @@ while($arrayp=mysqli_fetch_array($exeSQL))
 	echo "</a>";
 	echo "</td>";
 	echo "<td style='border: 0px'>";
-	echo "<p><h5>".$arrayp['prodName']."</h5></p>"; //display product name as contained in the array
+	echo "<h5>".$arrayp['prodName']."</h5>"; //display product name as contained in the array
+	echo "<p>".$arrayp['prodDescripShort']."</p>"; //display product description short
+	echo "<p> price: ".$arrayp['prodPrice']."</p>"; //display product price
 	echo "</td>";
 	echo "</tr>";
-	echo "<p>".$arrayp['prodDescripShort']."</p>"; //display product description short
-	echo "<p> price: ".$arrayp['prodPrice']."</p>"; //display product price short
 }
 echo "</table>";
 
