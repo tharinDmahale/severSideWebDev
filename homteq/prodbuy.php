@@ -31,6 +31,7 @@ $exeSQL=mysqli_query($conn, $SQL) or die(mysqli_error($conn));
 // populate it with the records retrieved by the SQL query previously executed.
 // Iterate through the array i.e while the end of the array has not been reached, run through it
 
+echo "<table>";
 while($arrayp=mysqli_fetch_array($exeSQL))
 {
 	echo "<tr>";
