@@ -22,5 +22,14 @@ VALUES
 	"FREE Upgrade to Windows 11", 
 	"The ASUS X415EA laptop has been created with an 11th generation Intel Core i5 processor, 8GB RAM, a 14” Full HD display and a 256GB solid state drive. This portable device will enable you to complete work projects, stream films and shows, check out your favourite websites, and participate in online meetings.",
 	459.99,
-	1
+	4
+),
+(
+	"Smart Lock",
+	"smartlock-small.png",
+	"smartlock-large.jpg",
+	"Lock doors smart",
+	"Lock doors with mobile app",
+	134.24,
+	8
 );
