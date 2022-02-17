@@ -53,15 +53,15 @@ while($arrayp=mysqli_fetch_array($exeSQL))
     //the value entered in the form will be posted to the basket.php to be processed
     echo "<form action=basket.php method=post>";
     //echo "<input type=text name=p_quantity size=5 maxlength=3>"; using drop instead
-    echo "<select>";
+    echo "<select name='p_quantity'>";
     for ($i = 0; $i <= $arrayp['prodQuantity']; $i++)
     {
-        echo "<option value=$i>$i</option>";
+        echo "<option value=".$i.">".$i."</option>";
     }
     echo "</select>";
     echo "<input type=submit name='submitbtn' value='ADD TO BASKET' id='submitbtn'>";
     //pass the product id to the next page basket.php as a hidden value
-    echo "<input type=hidden name=h_prodid value=".$prodid.">";
+    echo "<input type=hidden name='h_prodid' value=".$prodid.">";
     echo "</form>";
     echo "</p>";
 	echo "</td>";
