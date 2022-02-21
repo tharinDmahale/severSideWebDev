@@ -235,7 +235,7 @@ td
 	border: 5px solid #F8F8F8;
 }
 
-button, #submitbtn, .btn{
+button, #submitbtn, #resetbtn, .btn{
 	
 	background-color: #48494a;
 	color: #f2f2f2;
@@ -252,7 +252,7 @@ button, #submitbtn, .btn{
 	border-radius:20px;
 }
 
-button:hover, #submitbtn:hover, .btn:hover{
+button:hover, #submitbtn:hover, #resetbtn:hover, .btn:hover{
 	background-color:white;
 	color:black;
 }

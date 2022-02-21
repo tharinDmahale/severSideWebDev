@@ -34,7 +34,7 @@ if (isset($_POST["h_prodid"]))
     //echo "<p>Quantity is ".$reququantity."</p>";
 
     $_SESSION['basket'][$newprodid] = $reququantity;
-    echo "<p>Product ID: ".$newprodid.", 1 item added</p>";
+    echo "<p>1 item with product id ".$newprodid." added</p>";
 }
 
 if (isset($_SESSION['basket']))

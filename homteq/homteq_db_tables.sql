@@ -33,3 +33,18 @@ VALUES
 	134.24,
 	8
 );
+
+CREATE TABLE users
+(
+	userId INTEGER AUTO_INCREMENT,
+	userType VARCHAR(1),
+	userFName VARCHAR(100),
+	userSName VARCHAR(100),
+	userAddress VARCHAR(200),
+	userPostCode VARCHAR(20),
+	userTelNo VARCHAR(20),
+	userEmail VARCHAR(100) UNIQUE,
+	userPassword VARCHAR(100),
+
+	PRIMARY KEY (userId)
+);
