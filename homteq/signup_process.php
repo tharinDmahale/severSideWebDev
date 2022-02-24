@@ -42,18 +42,15 @@ if (!empty($firstname) && !empty($surname) && !empty($address) && !empty($postco
                 echo "<p></p>";
                 echo "<p>Please go back to <a href='signup.php'>sign up</a></p>";
             }
+            else if (mysqli_errno($conn) == 1064)
+            {
+                echo "<p>Invalid characters detected</p>";
+                echo "<p></p>";
+                echo "<p>Please go back to <a href='signup.php'>sign up</a></p>";
+            }
             else
             {
-                if (mysqli_errno($conn) == 1064)
-                {
-                    echo "<p>Invalid characters detected</p>";
-                    echo "<p></p>";
-                    echo "<p>Please go back to <a href='signup.php'>sign up</a></p>";
-                }
-                else
-                {
-                    echo "<p>You have been registered...</p>";
-                }
+                echo "<p>You have been registered...</p>";
             }
         }
         else
