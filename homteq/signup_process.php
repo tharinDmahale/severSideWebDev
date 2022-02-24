@@ -27,24 +27,33 @@ $email = $_POST["p_email"];
 $password = $_POST["p_password"];
 $password_confirmation = $_POST["p_confirm_password"];
 
-if ($password == $password_confirmation)
+if (!empty($firstname) && !empty($surname) && !empty($address) && !empty($postcode) && !empty($firstname) && !empty($telnumber) && !empty($email) && !empty($password))
 {
-    if (!empty($firstname) && !empty($surname) && !empty($address) && !empty($postcode) && !empty($firstname) && !empty($telnumber) && !empty($email) && !empty($password))
+    if ($password == $password_confirmation)
     {
-        $sql= "insert into users(userFName, userSName, userAddress, userPostCode, userTelNo, userEmail, userPassword) values('$firstname', '$surname', '$address', '$postcode', '$telnumber', '$email', '$password')";
-
-        if (mysqli_query($conn, $sql))
+        if (preg_match("/@/", $email) && preg_match("/.com/", $email))
         {
-            echo "<p>You have been registered...</p>";
+            $sql= "insert into users(userFName, userSName, userAddress, userPostCode, userTelNo, userEmail, userPassword) values('$firstname', '$surname', '$address', '$postcode', '$telnumber', '$email', '$password')";
+
+            if (mysqli_query($conn, $sql))
+            {
+                echo "<p>You have been registered...</p>";
+            }
+            else
+            {
+                echo "<p>But something went wrong...</p>";
+            }
         }
         else
         {
-            echo "<p>But something went wrong...</p>";
+            echo "<p>The email $email does not meet requirements</p>";
+            echo "<p></p>";
+            echo "<p>Please go back to <a href='signup.php'>sign up</a></p>";
         }
     }
     else
     {
-        echo "<p>Some input fields are empty</p>";
+        echo "<p>The password and password confirmation does not match</p>";
         echo "<p></p>";
         echo "<p>Please go back to <a href='signup.php'>sign up</a></p>";
     }
@@ -52,7 +61,7 @@ if ($password == $password_confirmation)
 }
 else
 {
-    echo "<p>The password and password confirmation does not match</p>";
+    echo "<p>Some input fields are empty</p>";
     echo "<p></p>";
     echo "<p>Please go back to <a href='signup.php'>sign up</a></p>";
 }
