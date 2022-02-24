@@ -34,14 +34,26 @@ if (!empty($firstname) && !empty($surname) && !empty($address) && !empty($postco
         if (preg_match("/^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,5}$/", $email))
         {
             $sql= "insert into users(userFName, userSName, userAddress, userPostCode, userTelNo, userEmail, userPassword) values('$firstname', '$surname', '$address', '$postcode', '$telnumber', '$email', '$password')";
+            mysqli_query($conn, $sql);
 
-            if (mysqli_query($conn, $sql))
+            if (mysqli_errno($conn) == 1062)
             {
-                echo "<p>You have been registered...</p>";
+                echo "<p>The email $email already exists</p>";
+                echo "<p></p>";
+                echo "<p>Please go back to <a href='signup.php'>sign up</a></p>";
             }
             else
             {
-                echo "<p>But something went wrong...</p>";
+                if (mysqli_errno($conn) == 1064)
+                {
+                    echo "<p>Invalid characters detected</p>";
+                    echo "<p></p>";
+                    echo "<p>Please go back to <a href='signup.php'>sign up</a></p>";
+                }
+                else
+                {
+                    echo "<p>You have been registered...</p>";
+                }
             }
         }
         else
