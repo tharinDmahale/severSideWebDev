@@ -14,7 +14,7 @@ include ("headfile.html");
 
 echo "<h4>".$pagename."</h4>";
 
-echo "<div>What happend!!</div>";
+// make
 
 include("footfile.html");
 
