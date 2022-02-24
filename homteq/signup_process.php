@@ -31,7 +31,7 @@ if (!empty($firstname) && !empty($surname) && !empty($address) && !empty($postco
 {
     if ($password == $password_confirmation)
     {
-        if (preg_match("/@/", $email) && preg_match("/.com/", $email))
+        if (preg_match("/^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,5}$/", $email))
         {
             $sql= "insert into users(userFName, userSName, userAddress, userPostCode, userTelNo, userEmail, userPassword) values('$firstname', '$surname', '$address', '$postcode', '$telnumber', '$email', '$password')";
 
