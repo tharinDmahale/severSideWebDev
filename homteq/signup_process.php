@@ -29,8 +29,16 @@ if ($password == $password_confirmation)
     // rest
     echo "<p>Alright!</p>";
 
-    $sql= "insert into users(userFName, userSName, userAddress, userPostCode, userTelNo, userEmail, userPassword) 
-        values($firstname, $surname, $address, $postcode, $telnumber, $email, $password)";
+    $sql= "insert into users(userFName, userSName, userAddress, userPostCode, userTelNo, userEmail, userPassword) values($firstname, $surname, $address, $postcode, $telnumber, $email, $password)";
+
+    if (mysqli_query($conn, $sql))
+    {
+        echo "<p>You have been registered...</p>";
+    }
+    else
+    {
+        echo "<p>But something went wrong...</p>";
+    }
 }
 else
 {
