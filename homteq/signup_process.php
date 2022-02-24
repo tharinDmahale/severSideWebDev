@@ -3,6 +3,9 @@
 session_start();
 include ("db.php");
 
+// This will deactivate the automatic error messaging that has been introduced since PHP 8.1 so that to allow for manual error handling.
+mysqli_report(MYSQLI_REPORT_OFF);
+
 $pagename="Sign Up Results";
 echo "<link rel=stylesheet type=text/css href=mystylesheet.css>";
 
@@ -24,7 +27,7 @@ $email = $_POST["p_email"];
 $password = $_POST["p_password"];
 $password_confirmation = $_POST["p_confirm_password"];
 
-if ($password == $password_confirmation)
+if (($password == $password_confirmation) && !empty($firstname) && !empty($surname) && !empty($address) && !empty($postcode) && !empty($firstname) && !empty($telnumber) && !empty($email) && !empty($password))
 {
     // rest
     echo "<p>Alright!</p>";
