@@ -28,6 +28,9 @@ if ($password == $password_confirmation)
 {
     // rest
     echo "<p>Alright!</p>";
+
+    $sql= "insert into users(userFName, userSName, userAddress, userPostCode, userTelNo, userEmail, userPassword) 
+        values($firstname, $surname, $address, $postcode, $telnumber, $email, $password)";
 }
 else
 {
