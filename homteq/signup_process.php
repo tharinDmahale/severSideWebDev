@@ -27,6 +27,7 @@ $password_confirmation = $_POST["p_confirm_password"];
 if ($password == $password_confirmation)
 {
     // rest
+    echo "<p>Alright!</p>";
 }
 else
 {
