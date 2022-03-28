@@ -33,6 +33,15 @@ echo "<input type='text' name='userPasswordField'/>";
 echo "</td>";
 echo "</tr>";
 
+echo "<tr>";
+echo "<td>";
+echo "<input type='reset' value='clear'/>";
+echo "</td>";
+echo "<td>";
+echo "<input type='submit' value='submit'/>";
+echo "</td>";
+echo "</tr>";
+
 echo "</form>";
 echo "</table>";
 
