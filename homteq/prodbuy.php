@@ -1,4 +1,5 @@
 <?php
+session_start();
 // connnet to DB
 include("db.php");
 
@@ -10,6 +11,7 @@ echo "<title>".$pagename."</title>";
 echo "<body>";
 
 include ("headfile.html");
+include("detectlogin.php");
 
 echo "<h4>".$pagename."</h4>";
 

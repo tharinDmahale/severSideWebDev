@@ -1,4 +1,5 @@
 <?php
+session_start();
 include ("db.php"); // include db.php file to connect to DB
 
 $pagename="Make your home smart"; // create and populate variable called $pagename
@@ -9,6 +10,7 @@ echo "<title>".$pagename."</title>";
 echo "<body>";
 
 include ("headfile.html");
+include("detectlogin.php");
 
 echo "<h4>".$pagename."</h4>";
 

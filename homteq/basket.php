@@ -2,6 +2,7 @@
 
 session_start();
 
+
 include ("db.php");
 
 $pagename="smart basket";
@@ -12,6 +13,7 @@ echo "<title>".$pagename."</title>";
 echo "<body>";
 
 include ("headfile.html");
+include("detectlogin.php");
 
 echo "<h4>".$pagename."</h4>";
 

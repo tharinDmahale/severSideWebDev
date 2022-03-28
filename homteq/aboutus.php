@@ -1,4 +1,5 @@
 <?php
+session_start();
 $pagename="hometeq: cloud controlled tech for your home";
 echo "<link rel=stylesheet type=text/css href=mystylesheet.css>";
 
@@ -7,6 +8,7 @@ echo "<title>".$pagename."</title>";
 echo "<body>";
 
 include ("headfile.html");
+include("detectlogin.php");
 
 echo "<h4>".$pagename."</h4>";
 
