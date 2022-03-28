@@ -2,7 +2,7 @@
 
 if(isset($_SESSION['userid']))
 {
-    echo "<p>Welome ".$_SESSION['fname']." ".$_SESSION['sname']."</p>";
+    echo "<p> ".$_SESSION['fname']." ".$_SESSION['sname']." Type:".$_SESSION['usertype']."</p>";
 }
 
 ?>

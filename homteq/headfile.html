@@ -14,7 +14,34 @@
 	</div>
 	<div id="navigation">
 	<ul>
-		<div>
+		<?php
+			if (!isset($_SESSION['userid']))
+			{
+				echo "<div>";
+					echo "<li><a href='index.php'>Home Tech</a></li>";
+					echo "<li><a href='aboutus.php'>About Us</a></li>";
+					echo "<li><a href='signup.php'>Sign Up</a></li>";
+					echo "<li><a href='login.php'>Login</a></li>";
+				echo "</div>";
+				echo "<div>";
+					echo "<li><a href='basket.php'>Smart Basket</a></li>";
+					echo "<li><a href='login.php'>Staff Login</a></li>";
+				echo "</div>";
+			}
+			else
+			{
+				echo "<div>";
+					echo "<li><a href='index.php'>Home Tech</a></li>";
+					echo "<li><a href='aboutus.php'>About Us</a></li>";
+					echo "<li><a href='signup.php'>Sign Up</a></li>";
+					echo "<li><a href='logout.php'>Logout</a></li>";
+				echo "</div>";
+				echo "<div>";
+					echo "<li><a href='basket.php'>Smart Basket</a></li>";
+				echo "</div>";
+			}
+		?>
+		<!-- <div>
 			<li><a href='index.php'>Home Tech</a></li>
 			<li><a href='aboutus.php'>About Us</a></li>
 			<li><a href='signup.php'>Sign Up</a></li>
@@ -23,7 +50,7 @@
 		<div>
 			<li><a href='basket.php'>Smart Basket</a></li>
 			<li><a href='login.php'>Staff Login</a></li>
-		</div>
+		</div> -->
 	</ul>
 	</div>
 </div>
