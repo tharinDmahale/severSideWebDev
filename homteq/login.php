@@ -26,10 +26,10 @@ echo "</tr>";
 
 echo "<tr>";
 echo "<td>";
-echo "<p>Email: </p>";
+echo "<p>Password: </p>";
 echo "</td>";
 echo "<td>";
-echo "<input type='text' name='userEmailField'/>";
+echo "<input type='text' name='userPasswordField'/>";
 echo "</td>";
 echo "</tr>";
 
