@@ -20,7 +20,7 @@ echo "<table>";
                 echo "<p>Email: </p>";
             echo "</td>";
             echo "<td>";
-                echo "<input type='text' name='userEmailField'/>";
+                echo "<input type='text' name='userEmailField' required/>";
             echo "</td>";
         echo "</tr>";
 
@@ -29,7 +29,7 @@ echo "<table>";
                 echo "<p>Password: </p>";
             echo "</td>";
             echo "<td>";
-                echo "<input type='text' name='userPasswordField'/>";
+                echo "<input type='text' name='userPasswordField' required/>";
             echo "</td>";
         echo "</tr>";
 
