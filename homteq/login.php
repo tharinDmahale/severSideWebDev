@@ -13,36 +13,36 @@ echo "<h4>".$pagename."</h4>";
 
 // login form
 echo "<table>";
-echo "<form action='login_process.php' method='post'>";
+    echo "<form action='login_process.php' method='post'>";
 
-echo "<tr>";
-echo "<td>";
-echo "<p>Email: </p>";
-echo "</td>";
-echo "<td>";
-echo "<input type='text' name='userEmailField'/>";
-echo "</td>";
-echo "</tr>";
+        echo "<tr>";
+            echo "<td>";
+                echo "<p>Email: </p>";
+            echo "</td>";
+            echo "<td>";
+                echo "<input type='text' name='userEmailField'/>";
+            echo "</td>";
+        echo "</tr>";
 
-echo "<tr>";
-echo "<td>";
-echo "<p>Password: </p>";
-echo "</td>";
-echo "<td>";
-echo "<input type='text' name='userPasswordField'/>";
-echo "</td>";
-echo "</tr>";
+        echo "<tr>";
+            echo "<td>";
+                echo "<p>Password: </p>";
+            echo "</td>";
+            echo "<td>";
+                echo "<input type='text' name='userPasswordField'/>";
+            echo "</td>";
+        echo "</tr>";
 
-echo "<tr>";
-echo "<td>";
-echo "<input type='reset' value='clear'/>";
-echo "</td>";
-echo "<td>";
-echo "<input type='submit' value='submit'/>";
-echo "</td>";
-echo "</tr>";
+        echo "<tr>";
+            echo "<td>";
+                echo "<input type='reset' value='clear'/>";
+            echo "</td>";
+            echo "<td>";
+                echo "<input type='submit' value='submit'/>";
+            echo "</td>";
+        echo "</tr>";
 
-echo "</form>";
+    echo "</form>";
 echo "</table>";
 
 include("footfile.html");
