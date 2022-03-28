@@ -88,8 +88,16 @@ else
 
 echo "<p></p>";
 echo "<p><a href='clearbasket.php'>CLEAR BASKET</a></p>";
-echo "<p>New homteq customers <a href='signup.php'>Sign Up</a></p>";
-echo "<p>Returning homteq customers <a href='login.php'>Login</a></p>";
+
+if (isset($_SESSION['userid']) && isset($_SESSION['basket']))
+{
+    echo "<p>Checkout <a href='checkout.php'>here</a></p>";
+}
+else
+{
+    echo "<p>New homteq customers <a href='signup.php'>Sign Up</a></p>";
+    echo "<p>Returning homteq customers <a href='login.php'>Login</a></p>";
+}
 
 include("footfile.html");
 
