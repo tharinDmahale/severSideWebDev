@@ -1,5 +1,7 @@
 <?php
-$pagename="template";
+session_start();
+include("db.php");
+$pagename="Your Login Results";
 echo "<link rel=stylesheet type=text/css href=mystylesheet.css>";
 
 echo "<title>".$pagename."</title>";
