@@ -48,3 +48,29 @@ CREATE TABLE users
 
 	PRIMARY KEY (userId)
 );
+
+CREATE TABLE orders
+(
+	orderNo INTEGER AUTO_INCREMENT,
+	userId INTEGER,
+	orderDateTime DATETIME NOT NULL,
+	orderTotal DECIMAL(8, 2) DEFAULT 0.00,
+	orderStatus VARCHAR(50),
+	shippingDate DATE,
+
+	PRIMARY KEY (orderNo),
+	FOREIGN KEY (userId) REFERENCES users(userId)
+);
+
+CREATE TABLE order_line
+(
+	orderLineId INTEGER AUTO_INCREMENT,
+	orderNo INTEGER,
+	prodId INTEGER,
+	quantityOrdered INTEGER NOT NULL,
+	subTotal DECIMAL (8, 2) DEFAULT 0.00,
+
+	PRIMARY KEY (orderLineId),
+	FOREIGN KEY (orderNo) REFERENCES orders(orderNo),
+	FOREIGN KEY (prodId) REFERENCES product(prodId)
+);
