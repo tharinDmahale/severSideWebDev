@@ -30,7 +30,7 @@ $password = $_POST['userPasswordField'];
 
 // test post
 echo "<p>email: ".$email."</p>";
-echo "<p>password: ".$password."</p>";
+//echo "<p>password: ".$password."</p>";
 
 $query = "select * from users where userEmail='".$email."'";
 $result = mysqli_query($conn, $query);
@@ -54,9 +54,20 @@ else
         $_SESSION['userid'] = $arrayp['userId'];
         $_SESSION['fname'] = $arrayp['userFName'];
         $_SESSION['sname'] = $arrayp['userSName'];
-        $_SESSION['usertype'] = "customer";
+        $_SESSION['usertype'] = $arrayp['userType'];
 
-        echo "<p>Welcome ".$_SESSION['usertype']." ".$_SESSION['usertype']." ".$_SESSION['fname']." ".$_SESSION['sname']."</p>";
+        echo "<p>Welcome ".$_SESSION['fname']." ".$_SESSION['sname']." !</p>";
+        echo "<p>user type : ".$_SESSION['usertype']."</p>";
+
+        if ($_SESSION['usertype'] == 'A')
+        {
+            $_SESSION['user_type'] = "Administrator";
+            echo "<p>Logged in as admin</p>";
+        }
+        else
+        {
+            $_SESSION['user_type'] = "Customer";
+        }
     }
 }
 

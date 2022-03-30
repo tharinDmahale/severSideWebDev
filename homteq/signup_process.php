@@ -33,7 +33,7 @@ if (!empty($firstname) && !empty($surname) && !empty($address) && !empty($postco
     {
         if (preg_match("/^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,5}$/", $email))
         {
-            $sql= "insert into users(userFName, userSName, userAddress, userPostCode, userTelNo, userEmail, userPassword) values('$firstname', '$surname', '$address', '$postcode', '$telnumber', '$email', '$password')";
+            $sql= "insert into users(userType, userFName, userSName, userAddress, userPostCode, userTelNo, userEmail, userPassword) values('C', '$firstname', '$surname', '$address', '$postcode', '$telnumber', '$email', '$password')";
             mysqli_query($conn, $sql);
 
             if (mysqli_errno($conn) == 1062)

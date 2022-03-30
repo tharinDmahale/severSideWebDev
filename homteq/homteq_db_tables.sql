@@ -74,3 +74,15 @@ CREATE TABLE order_line
 	FOREIGN KEY (orderNo) REFERENCES orders(orderNo),
 	FOREIGN KEY (prodId) REFERENCES product(prodId)
 );
+
+INSERT INTO users(userType, userFName, userSName, userAddress, userPostCode, userTelNo, userEmail, userPassword)
+VALUES (
+	"A",
+	"Obi-Wan",
+	"Kenobi",
+	"56, Tatooin Street, Jedi Square",
+	"0780",
+	"0773443245",
+	"kenobi@jedimasters.com",
+	"789ghi"
+);
